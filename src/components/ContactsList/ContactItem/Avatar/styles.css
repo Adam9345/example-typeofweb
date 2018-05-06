@@ -1,0 +1,10 @@
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatarContainer img {
+  width: 50;
+  height: 50;
+}

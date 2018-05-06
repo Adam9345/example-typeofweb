@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.headerLogoContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.headerImg {
+  width: 100px;
+}
+
+.buttonAdd {
+  padding: 15px;
+  background-color: lightgrey;
+  border-radius: 10px;
+  align-self: flex-start;
+  outline: none;
+}
+
+.containerButtonAdd {
+  display: flex;
+  padding: 0 30px;
+  flex-grow: 6;
+  border: 1px solid gray;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

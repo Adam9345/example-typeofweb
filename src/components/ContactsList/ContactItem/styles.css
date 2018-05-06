@@ -1,0 +1,26 @@
+.item {
+  list-style-type: none;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+  margin: 20px;
+}
+
+.item:last-child {
+  border: none;
+}
+
+.item .textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.item h2 {
+  margin: 0;
+}
+
+.item p {
+  margin: 0;
+}
