@@ -2,14 +2,28 @@
 import React, { Component } from "react";
 import ContactItem from "./ContactItem";
 
-type Props = {};
+type Props = {
+  contacts: Array<Object>
+};
 
 class ContactsList extends Component<Props> {
   render() {
+    const { contacts } = this.props;
+
+    const renderContacts = contacts.map((contact, index) => (
+      <ContactItem
+        key={index}
+        login={contact.login.username}
+        name={contact.name.first}
+        department={contact.location.city}
+      />
+    ));
+
     return (
       <div>
         <ul>
-          <ContactItem
+          {renderContacts}
+          {/* <ContactItem
             login="typeofweb1"
             name="Lena"
             department="JavaScript Developer"
@@ -19,7 +33,7 @@ class ContactsList extends Component<Props> {
             name="Brian"
             department="Human Resources"
           />
-          <ContactItem login="typeofweb3" name="Rick" department="QA" />
+          <ContactItem login="typeofweb3" name="Rick" department="QA" /> */}
         </ul>
       </div>
     );
