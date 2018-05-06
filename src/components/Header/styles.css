@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
 }
 
 .headerLogoContainer {
@@ -26,7 +25,7 @@
 
 .containerButtonAdd {
   display: flex;
-  padding: 0 30px;
+  padding: 0 10px;
   flex-grow: 6;
   border: 1px solid gray;
   flex-direction: column;
