@@ -27,5 +27,5 @@
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://Adam9345.github.io/example-typeofweb"
+  "homepage": "https://adam9345.github.io/example-typeofweb/"
 }
