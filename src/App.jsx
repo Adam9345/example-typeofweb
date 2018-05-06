@@ -7,7 +7,8 @@ import { contactsFetched } from "./actions";
 
 type Props = {
   contactsFetched: Function,
-  contacts: Array<Object>
+  contacts: Array<Object>,
+  isFetching: Boolean
 };
 
 class App extends Component<Props> {
@@ -26,12 +27,12 @@ class App extends Component<Props> {
   }
 
   render() {
-    const { contacts } = this.props;
+    const { contacts, isFetching } = this.props;
 
     return (
       <div>
         <Header />
-        <ContactsList contacts={contacts} />
+        <ContactsList contacts={contacts} isFetching={isFetching} />
       </div>
     );
   }
@@ -39,7 +40,8 @@ class App extends Component<Props> {
 
 export default connect(
   state => ({
-    contacts: state.contacts
+    contacts: state.contacts.contacts,
+    isFetching: state.contacts.isFetching
   }),
   { contactsFetched }
 )(App);

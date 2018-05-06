@@ -1,14 +1,16 @@
 //@flow
 import React, { Component } from "react";
 import ContactItem from "./ContactItem";
+import "./styles.css";
 
 type Props = {
-  contacts: Array<Object>
+  contacts: Array<Object>,
+  isFetching: Boolean
 };
 
 class ContactsList extends Component<Props> {
   render() {
-    const { contacts } = this.props;
+    const { contacts, isFetching } = this.props;
 
     const renderContacts = contacts.map((contact, index) => (
       <ContactItem
@@ -19,24 +21,15 @@ class ContactsList extends Component<Props> {
       />
     ));
 
-    return (
-      <div>
-        <ul>
-          {renderContacts}
-          {/* <ContactItem
-            login="typeofweb1"
-            name="Lena"
-            department="JavaScript Developer"
-          />
-          <ContactItem
-            login="typeofweb2"
-            name="Brian"
-            department="Human Resources"
-          />
-          <ContactItem login="typeofweb3" name="Rick" department="QA" /> */}
-        </ul>
-      </div>
-    );
+    if (isFetching) {
+      return (
+        <div>
+          <ul>{renderContacts}</ul>
+        </div>
+      );
+    } else {
+      return <div className="loadingText">Ładowanie...</div>;
+    }
   }
 }
 
