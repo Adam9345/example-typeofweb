@@ -23,5 +23,6 @@
     "flow": "node_modules/.bin/flow",
     "gulp": "node_modules/.bin/gulp watch",
     "flow-typed": "node_modules/.bin/flow-typed"
-  }
+  },
+  "homepage": "https://Adam9345.github.io/example-typeofweb"
 }
